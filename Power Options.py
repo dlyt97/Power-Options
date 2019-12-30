@@ -24,7 +24,7 @@ x=int(input('''1-lock
 3-shutdown
 4-restart
 5-sleep\n'''))
-if x==1:
+if x==1:#LOCK
     try:
         y=int(input('time(seconds):'))
         for z in range(y)[::-1]:
@@ -33,7 +33,7 @@ if x==1:
         lock()
     except:
         print("Not a number")
-elif x==2:
+elif x==2:#LOG OFF
     try:
         y=int(input('time(seconds):'))
         for z in range(y)[::-1]:
@@ -42,7 +42,7 @@ elif x==2:
         log_off()
     except:
         print("Not a number")
-elif x==3:
+elif x==3:#SHUTDOWN
     try:
         y=int(input('time(seconds):'))
         for z in range(y)[::-1]:
@@ -51,7 +51,16 @@ elif x==3:
         shutdown()
     except:
         print("Not a number")
-elif x==4:
+elif x==4:#RESTART
+    try:
+        y=int(input('time(seconds):'))
+        for z in range(y)[::-1]:
+            time.sleep(1)
+            print(x)
+        restart()
+    except:
+        print("Not a number")
+elif x==5:#SLEEP
     try:
         y=int(input('time(seconds):'))
         for z in range(y)[::-1]:
